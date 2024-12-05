@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="timetable.html">Timetable Generator</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section id="subjects">
+            <h2>Manage Subjects</h2>
+            <form id="subjectForm">
+                <input type="text" id="newSubject" placeholder="Add a new subject" required>
+                <button type="submit">Add Subject</button>
+            </form>
+            <ul id="subjectList"></ul>
+        </section>
+        <section id="settings">
+            <h2>Timetable Settings</h2>
+            <label for="totalDays">Number of Days:</label>
+            <input type="number" id="totalDays" value="5" min="1" max="7">
+            <label for="slotsPerDay">Slots per Day:</label>
+            <input type="number" id="slotsPerDay" value="8" min="1" max="12">
+            <button id="saveSettings">Save Settings</button>
+        </section>
+    </main>
+    <script src="js/admin.js"></script>
+</body>
+</html>

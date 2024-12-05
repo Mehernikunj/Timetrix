@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Timetable Generator</title>
+    <link rel="stylesheet" href="css/timetable.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <a href="home.html" class="nav-button">Home</a>
+        <a href="about.html" class="nav-button">About</a>
+        <a href="timetable.html" class="nav-button active">Timetable Generator</a>
+        <a href="logout.html" class="nav-button">Logout</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Predictive Timetable Generator</h1>
+        <form id="timetable-form">
+            <label for="timetableType">Timetable Type:</label>
+            <select id="timetableType" required>
+                <option value="">Select Type</option>
+                <option value="School">School</option>
+                <option value="College">College</option>
+                <option value="Gym">Gym</option>
+                <option value="Office">Office</option>
+                <option value="Hospital">Hospital</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <div id="subjects-container">
+                <div class="subject-group">
+                    <label id="activityLabel">Subject/Activity:</label>
+                    <input type="text" class="subject" required>
+                    
+                    <label>Duration (in minutes):</label>
+                    <input type="number" class="duration" required min="1">
+                    
+                    <label>Preferred Day:</label>
+                    <select class="preferredDay" required>
+                        <option value="">Select Day</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" id="add-subject">Add Another Subject/Activity</button>
+            <button type="submit">Generate Timetable</button>
+            <button type="button" id="clear-form">Clear Form</button>
+        </form>
+
+        <!-- Timetable Display -->
+        <div id="timetable">
+            <h2>Generated Timetable</h2>
+            <table id="timetable-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Day</th>
+                        <th>Subject/Activity</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                    </tr>
+                </thead>
+                <tbody id="timetable-body">
+                    <!-- Timetable will be generated here -->
+                </tbody>
+            </table>
+            <div id="total-times"></div>
+        </div>
+
+        <button id="toggle-theme">Toggle Dark Mode</button>
+    </div>
+    <script src="js/timetable.js"></script>
+</body>
+</html>
