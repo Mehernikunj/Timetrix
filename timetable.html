@@ -12,7 +12,7 @@
         <a href="home.html" class="nav-button">Home</a>
         <a href="about.html" class="nav-button">About</a>
         <a href="timetable.html" class="nav-button active">Timetable Generator</a>
-        <a href="logout.html" class="nav-button">Logout</a>
+        <button id="logoutBtn" class="nav-button">Logout</button> <!-- Changed to a button -->
     </nav>
 
     <!-- Main Content -->
@@ -76,6 +76,16 @@
 
         <button id="toggle-theme">Toggle Dark Mode</button>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Add event listener to the logout button
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            // Redirect to the login page
+            window.location.href = 'login.html';
+        });
+    </script>
+
     <script src="js/timetable.js"></script>
 </body>
 </html>
