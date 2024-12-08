@@ -10,63 +10,65 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00796b;
+    background-color: #263238; /* Darker background */
     padding: 10px 0;
-    position: fixed; /* Ensures the navbar stays at the top */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Full width of the screen */
-    z-index: 1000; /* High stacking order */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Darker shadow for spooky look */
 }
 
 .nav-button {
     text-decoration: none;
-    color: white;
+    color: #b3b3b3; /* Greyish text for an ominous vibe */
     padding: 10px 20px;
     margin: 0 5px;
-    background-color: #004d40;
+    background-color: #455a64;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.7); /* Glowing red text */
 }
 
 .nav-button:hover {
-    background-color: #26a69a;
+    background-color: #ff5722; /* Fiery orange on hover */
+    text-shadow: 0 0 15px rgba(255, 87, 34, 1); /* Stronger red glow */
 }
 
 .nav-button.active {
-    background-color: #26a69a;
+    background-color: #ff5722;
     pointer-events: none;
+    text-shadow: 0 0 10px rgba(255, 87, 34, 1);
 }
 
 /* Ensure content starts below the navbar */
 body {
     margin: 0;
-    padding-top: 60px; /* Adjusted for navbar height */
+    padding-top: 60px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e0f7fa;
-    color: #333;
+    background-color: #263238; /* Dark background for the body */
+    color: #b3b3b3; /* Lighter text for readability in dark mode */
     transition: background-color 0.3s ease;
 }
 
-/* Dark Mode */
 body.dark-mode {
-    background-color: #263238;
-    color: #e0f7fa;
+    background-color: #121212; /* Darker background for dark mode */
+    color: #e0f7fa; /* Light cyan text for contrast */
 }
 
 body.dark-mode .navbar {
-    background-color: #263238;
+    background-color: #121212;
 }
 
 body.dark-mode .nav-button {
-    background-color: #455a64;
+    background-color: #607d8b;
     color: #e0f7fa;
 }
 
 body.dark-mode .nav-button.active {
-    background-color: #607d8b;
+    background-color: #795548;
 }
 
 /* Container Styling */
@@ -74,22 +76,24 @@ body.dark-mode .nav-button.active {
     width: 90%;
     max-width: 650px;
     padding: 30px;
-    background-color: #ffffff;
+    background-color: #333333; /* Darker container background */
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7); /* Darker shadow for eerie effect */
     transition: box-shadow 0.3s ease;
-    margin: 0 auto; /* Center content */
+    margin: 0 auto;
+    color: #e0f7fa;
 }
 
 .container:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Intense shadow for hover effect */
 }
 
 /* Header */
 h1, h2 {
     text-align: center;
-    color: #00796b;
+    color: #ff5722; /* Fiery red for headers */
     margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 87, 34, 0.7); /* Glowing red text effect */
 }
 
 h1 {
@@ -113,13 +117,14 @@ form {
     padding: 15px;
     border: 1px solid #b2dfdb;
     border-radius: 8px;
-    background-color: #e0f2f1;
+    background-color: #455a64;
 }
 
 label {
     font-weight: 500;
-    color: #004d40;
+    color: #ff5722;
     margin-top: 10px;
+    text-shadow: 0 0 8px rgba(255, 87, 34, 0.7); /* Glowing text */
 }
 
 input[type="text"],
@@ -129,10 +134,10 @@ select {
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 10px;
-    border: 1px solid #b2dfdb;
+    border: 1px solid #ff5722; /* Red border for focus */
     border-radius: 8px;
-    background-color: #ffffff;
-    color: #333;
+    background-color: #333333;
+    color: #e0f7fa;
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
@@ -140,7 +145,7 @@ select {
 input[type="text"]:focus,
 input[type="number"]:focus,
 select:focus {
-    border-color: #00796b;
+    border-color: #ff5722; /* Red border when focused */
     outline: none;
 }
 
@@ -151,16 +156,18 @@ button {
     border-radius: 8px;
     cursor: pointer;
     margin-top: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-shadow: 0 0 8px rgba(255, 87, 34, 0.7); /* Glowing effect */
 }
 
 #add-subject {
-    background-color: #4db6ac;
+    background-color: #f44336;
     color: white;
 }
 
 #add-subject:hover {
-    background-color: #00796b;
+    background-color: #d32f2f;
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.7);
 }
 
 button[type="submit"] {
@@ -170,6 +177,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #004d40;
+    box-shadow: 0 4px 8px rgba(255, 87, 34, 0.7);
 }
 
 #clear-form {
@@ -194,7 +202,7 @@ table {
 }
 
 th, td {
-    border: 1px solid #b2dfdb;
+    border: 1px solid #ff5722;
     padding: 10px;
     text-align: center;
 }
@@ -203,14 +211,16 @@ th {
     background-color: #004d40;
     color: white;
     font-weight: 600;
+    text-shadow: 0 0 8px rgba(255, 87, 34, 0.7); /* Glowing text */
 }
 
 td {
-    background-color: #e0f2f1;
+    background-color: #333333;
+    color: #e0f7fa;
 }
 
 td:nth-child(even) {
-    background-color: #b2dfdb; /* Alternate row color */
+    background-color: #455a64; /* Alternate row color */
 }
 
 #total-times {
@@ -220,11 +230,12 @@ td:nth-child(even) {
 
 /* Dark Mode Table */
 body.dark-mode th {
-    background-color: #004d40;
+    background-color: #455a64;
+    color: white;
 }
 
 body.dark-mode td {
-    background-color: #455a64;
+    background-color: #263238;
 }
 
 body.dark-mode #total-times {
@@ -235,13 +246,15 @@ body.dark-mode #total-times {
 #toggle-theme {
     margin-top: 20px;
     padding: 10px 15px;
-    background-color: #00796b;
+    background-color: #ff5722;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    text-shadow: 0 0 8px rgba(255, 87, 34, 0.7); /* Glowing text */
 }
 
 #toggle-theme:hover {
-    background-color: #004d40;
+    background-color: #c62828;
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.7);
 }
