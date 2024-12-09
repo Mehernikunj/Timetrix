@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 activityLabel.textContent = "Work:";
                 break;
             case "Hospital":
-                activityLabel.textContent = "Doctor Timing:";
+                activityLabel.textContent = "Doctor Specialization:";
                 break;
             case "Other":
                 activityLabel.textContent = "Task:";
